@@ -4,16 +4,18 @@
             <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/ee037401cb5d31b23cf780808ee4ec1f.svg" alt="" class="src">
             <div class="wrapper--input">
                 <input v-model="user_search_restaurant" type="text" placeholder="De quoi avez vous envie ?">
-                <div class="search">
-                    <div v-for="(restaurant, i) in search_restaurant" :key="i" class="countainer--restaurant--search">
-                        <div class="wrapper--img">
-                            <img :src="restaurant.image" alt="">
+                    <div class="search">
+                        <div v-for="(restaurant, i) in search_restaurant" :key="i" class="countainer--restaurant--search">
+                            <router-link :to="{ name: 'restaurant', params: { name: restaurant.name }}">
+                                <div class="wrapper--img">
+                                    <img :src="restaurant.image" alt="">
+                                </div>
+                                <div class="nom">
+                                    <p>{{ restaurant.name }}</p>
+                                </div>
+                            </router-link>
                         </div>
-                        <p>
-                            {{ restaurant.name }}
-                        </p>
                     </div>
-                </div>
             </div>
         </div>
         <div class="bannier">
@@ -139,6 +141,12 @@ export default {
                                 width: auto;
                                 height: 100%;
                             }
+                        }
+                        .nom {
+                            margin-left: 80px;
+                            position: relative;
+                            top: -50px;
+                            margin-bottom: -40px;
                         }
                     }
                 }
