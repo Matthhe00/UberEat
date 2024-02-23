@@ -1,5 +1,7 @@
 # ubereat-test
 
+link to see: https://ubereat-testv1.netlify.app
+
 ## Project setup
 ```
 npm install
