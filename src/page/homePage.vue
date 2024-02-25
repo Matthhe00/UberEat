@@ -78,6 +78,7 @@ export default {
             
             let new_search_restaurant = all_restaurant.filter(restaurant => regex.test(restaurant.name.toLowerCase()));
 
+            
             new_value == 0 ? search_restaurant.value = [] : search_restaurant.value = new_search_restaurant;
         })
 

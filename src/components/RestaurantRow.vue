@@ -20,7 +20,8 @@ export default {
         three_restaurant: {
             type: Array,
         }
-    }
+    }, 
+    
 
 }
 </script>

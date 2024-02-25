@@ -1,8 +1,11 @@
 <template>
+    
     <div class="restaurant--card">
+        <router-link :to="{ name: 'restaurant', params: { name: info_restaurant.name }}">
         <div :style="changeBackground" class="restaurant--image">
 
         </div>
+        </router-link>
         <div class="restaurant--information">
             <div class="top">
                 <p class="name">
@@ -18,7 +21,7 @@
                 {{ info_restaurant.drive_time }}
             </p>
         </div>
-     </div>
+    </div>
 </template>
 
 <script>

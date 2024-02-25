@@ -1,10 +1,13 @@
 <template>
+    <router-link to="/">
+        <div id="return">Retour acceuil</div>
+    </router-link>
     <div>
-        <h2>
-            Bienvenu chez {{ restaurant.name }} <br>
-            {{ restaurant.note }}
-        </h2>
+        <img :src="restaurant.image" alt="">
     </div>
+    <p>{{ restaurant.name }}</p>
+    <p>Note du restaurant : {{ restaurant.note }}</p>
+    <p>Temps de livraison : {{ restaurant.drive_time }}</p>
 </template>
 
 <script>
@@ -24,6 +27,14 @@ name: 'RestaurantPage',
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+    #return {
+        margin: 25px 45px;
+        font-weight: 400;
+        cursor: pointer;
 
+        &:hover {
+            font-weight: 900;
+        }
+    }
 </style>
